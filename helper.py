@@ -74,17 +74,18 @@ def _get_acm_references(link):
     text = request_cache(link)
     html = bs4.BeautifulSoup(text, features="html.parser")
     references = []
-    for item in html.find_all("li", {"class":"references__item"}):
+    for item in html.find_all("li", {"class": "references__item"}):
         links = {}
-        for reference_link in item.find('span', {"class":"references__suffix"}).find_all('a'):
+        for reference_link in item.find('span', {"class": "references__suffix"}).find_all('a'):
             links[reference_link["class"][0]] = reference_link["href"]
         references.append({
-            'title': item.find('span', {"class":"references__note"}).contents[0],
+            'title': item.find('span', {"class": "references__note"}).contents[0],
             'links': links
         })
     return references
 
-def _get_acm_cited_by(dois):
+
+def get_acm_cited_by(dois):
     log("[INFO] Getting cited by:", dois)
     url = "https://dl.acm.org/action/ajaxShowCitedBy?ajax=true&doi=" + dois + "&pbContext=;taxonomy:taxonomy:conference-collections;wgroup:string:ACM Publication Websites;groupTopic:topic:acm-pubtype"
     response = requests.request("GET", url)
@@ -92,8 +93,8 @@ def _get_acm_cited_by(dois):
     html_items = html.find_all('li', 'references__item')
 
     def map_fn(li):
-        doi_el = li.find('span', {"class":"doi"})
-        title_el = li.find('span', {"class":"references__article-title"})
+        doi_el = li.find('span', {"class": "doi"})
+        title_el = li.find('span', {"class": "references__article-title"})
         info = None
         doi = None
         if title_el:
@@ -102,8 +103,8 @@ def _get_acm_cited_by(dois):
             if not doi:
                 links = list(filter(lambda link: "doi/" in link["href"] or "doi.org" in link["href"], li.find_all('a')))
                 if len(links):
-                    doi = links[0]["href"].replace('https://doi.org/','').replace('/doi/','')
-            if len(doi)> 15:
+                    doi = links[0]["href"].replace('https://doi.org/', '').replace('/doi/', '')
+            if len(doi) > 15:
                 pass
             if not doi:
                 doi = find_doi_by_text(title_el.text)
@@ -114,6 +115,7 @@ def _get_acm_cited_by(dois):
                 'doi': doi,
                 'informations': info
             }
+
     return list(filter(lambda item: item, map(map_fn, html_items)))
 
 
@@ -121,18 +123,31 @@ def get_references(link):
     if 'dl.acm.org' in link:
         return _get_acm_references(link)
 
+
+__all_logs = []
+
+
 def log(*args):
+    global __all_logs
     text = ' '.join(map(lambda item: str(item), args))
+    __all_logs.append(text + "\n")
     if "[INFO]" in text:
         print(text)
     elif "[ERROR]" in text:
-        cprint(text,'red')
+        cprint(text, 'red')
     elif "[WARN]" in text:
-        cprint(text,'yellow')
+        cprint(text, 'yellow')
     elif "[SUCCESS]" in text:
-        cprint(text,'green')
+        cprint(text, 'green')
+    elif "[METRIC]" in text:
+        cprint(text, 'blue')
     else:
         print(text)
+
+
+def write_log():
+    global __all_logs
+    write_file("log.txt", ''.join(__all_logs))
 
 
 def get_doi_informations(doi):
@@ -165,7 +180,7 @@ def find_doi_by_text(text):
                                   data={'freetext': text, 'command': 'Submit'}, cookies=True)
     html = bs4.BeautifulSoup(html_response, features="html.parser")
     links = html.find_all("a")
-    links_with_doi = list(filter(lambda link:"doi.org" in link["href"], links))
+    links_with_doi = list(filter(lambda link: "doi.org" in link["href"], links))
     doi = None
     if len(links_with_doi):
         protocol, doi = links_with_doi[0]["href"].split('doi.org/')

@@ -1,0 +1,50 @@
+[0][INFO] Removing file: results\screpper_metrics.csv
+[0][INFO] Removing file: results\manually_location_accepted.json
+[0][INFO] Removing file: results\manually_location_rejected.json
+[0][INFO] Removing file: results\metrics_manually_location.csv
+[0][INFO] http://dl.acm.org/ft_gateway.cfm?id=347664&amp;ftid=4974&amp;dwn=1
+[0][INFO] http://dl.acm.org/ft_gateway.cfm?id=778729&amp;ftid=285561&amp;dwn=1
+[0][INFO] https://dl.acm.org/doi/pdf/10.1145/3411764.3445414
+[0][INFO] https://dl.acm.org/doi/pdf/10.1145/3476071
+[0][INFO] http://link.springer.com/content/pdf/10.1007/978-3-030-49904-4_37
+[0][INFO] http://link.springer.com/content/pdf/10.1007/978-3-030-50334-5_7
+[0][INFO] http://link.springer.com/content/pdf/10.1007/978-3-030-49570-1_8
+[0][INFO] http://link.springer.com/content/pdf/10.1007/978-3-030-49282-3_4
+[0][INFO] http://link.springer.com/content/pdf/10.1007/978-3-030-49907-5_15
+[0][INFO] http://link.springer.com/content/pdf/10.1007/978-3-030-45289-6_1
+[0][INFO] http://link.springer.com/content/pdf/10.1007/978-3-030-23535-2_31
+[0][INFO] https://dl.acm.org/doi/pdf/10.1145/3218585.3218681
+[0][INFO] https://dl.acm.org/doi/pdf/10.1145/3240167.3240188
+[0][INFO] https://dl.acm.org/doi/pdf/10.1145/3240167.3240197
+[0][INFO] https://scienceopen.com/document?vid=bf22117e-2519-48ef-ab2e-9eb7162cd25b
+[0][INFO] https://dl.acm.org/doi/pdf/10.1145/3025453.3026003
+[0][INFO] https://dl.acm.org/doi/pdf/10.1145/3121283.3121309
+[0][INFO] http://link.springer.com/content/pdf/10.1007/978-3-319-20901-2_19
+[0][INFO] http://dl.acm.org/ft_gateway.cfm?id=2671474&amp;ftid=1507574&amp;dwn=1
+[0][INFO] https://dl.acm.org/doi/pdf/10.1145/2556288.2557115
+[0][INFO] http://dl.acm.org/ft_gateway.cfm?id=2535604&amp;ftid=1423571&amp;dwn=1
+[0][INFO] http://dl.acm.org/ft_gateway.cfm?id=2468733&amp;ftid=1366677&amp;dwn=1
+[0][INFO] 10.5555/2022384.2022402
+[0][INFO] 10.5555/2022384.2022419
+[0][INFO] http://dl.acm.org/ft_gateway.cfm?id=1869025&amp;ftid=831721&amp;dwn=1
+[0][INFO] http://link.springer.com/content/pdf/10.1007/978-1-84882-371-6_7.pdf
+[0][INFO] http://dl.acm.org/ft_gateway.cfm?id=1629880&amp;ftid=686983&amp;dwn=1
+[0][INFO] http://dl.acm.org/ft_gateway.cfm?id=1514174&amp;ftid=603030&amp;dwn=1
+[0][INFO] http://dl.acm.org/ft_gateway.cfm?id=1394492&amp;ftid=532508&amp;dwn=1
+[0][INFO] http://dl.acm.org/ft_gateway.cfm?id=1324895&amp;ftid=474679&amp;dwn=1
+[0][INFO] 10.5555/1772490.1772512
+[0][INFO] http://dl.acm.org/ft_gateway.cfm?id=1147271&amp;ftid=368331&amp;dwn=1
+[0][INFO] http://dl.acm.org/ft_gateway.cfm?id=1111395&amp;ftid=342334&amp;dwn=1
+[0][INFO] http://dl.acm.org/ft_gateway.cfm?id=1111388&amp;ftid=342327&amp;dwn=1
+[0][INFO] http://dl.acm.org/ft_gateway.cfm?id=1028017&amp;ftid=283680&amp;dwn=1
+[0][INFO] https://api.elsevier.com/content/article/PII:S1071581913001365?httpAccept=text/xml
+[0][INFO] 10.5555/1763296.1763347
+[0][INFO] http://dl.acm.org/ft_gateway.cfm?id=1028060&amp;ftid=283723&amp;dwn=1
+[0][INFO] https://dl.acm.org/doi/pdf/10.1145/3313831.3376328
+[0][INFO] http://link.springer.com/content/pdf/10.1007/978-3-319-30028-3_2
+[0][INFO] https://dl.acm.org/doi/pdf/10.1145/2858036.2858183
+[0][INFO] http://link.springer.com/content/pdf/10.1007/978-3-319-40406-6_17
+[0][INFO] https://dl.acm.org/doi/pdf/10.1145/2957265.2957275
+[0][INFO] https://dl.acm.org/doi/pdf/10.1145/2940299.2940315
+[0][INFO] http://link.springer.com/content/pdf/10.1007/978-3-030-60149-2_3
+[0][INFO] http://link.springer.com/content/pdf/10.1007/978-3-319-92279-9_2
